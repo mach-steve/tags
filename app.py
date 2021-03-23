@@ -10,6 +10,7 @@ FLASK_ENV = os.environ.get('FLASK_ENV') or 'development'
 app = Flask(__name__)
 
 app.config['config'] = load_config(join(app.root_path, '../shared/config.yml'))
+cfg = app.config['config']
 
 dbname = load_config('config/database.yml')[FLASK_ENV]['database']
 # embed()
